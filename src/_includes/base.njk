@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/style_common.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script src="/assets/scripts/common.js"></script>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="topbar">
+                <div class="title">
+                </div>
+              <div class="search"></div>
+              <div class="logo"><a href="/">&lt/t&gt</a>
+              </div>
+            </div>
+            <div class="content">
+              <div class="nav">
+                <div id="allnav">
+                    <h2>Pages</h2>
+                    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+                </div>
+                <hr>
+                <div id="postnav">
+                    <h2>Posts</h2>
+                    <ul>
+                        {%- for post in collections.post -%}
+                          <li>{{ post.data.title }}</li>
+                        {%- endfor -%}
+                        </ul>
+                </div>
+            </div>
+              <div class="tape">
+                <div id="tapecontent">
+                    <div class="greeter">
+                        {{ content | safe }}
+                    </div>
+                    <hr>
+                    <div class="posts"></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+                <div class="foot_c"><h3 style="text-align: center;">© Tibroness (Devbrones) 2023-NaN</h3></div>
+                <div class="fool_l">
+                    <a id="pggitlink" href="https://github.com/devbrones/tibronessorg"><i class="fa fa-github" style="font-size:36px"></i></a>
+                </div>
+                <div class="foot_r" style="text-align: right;">
+                    <h3 style="margin-bottom:0;">I use<a href="https://11ty.dev">11ty</a>!</h3>
+                </div>
+              </div>
+          </div>
+    </body>
+</html>

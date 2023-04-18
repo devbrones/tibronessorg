@@ -1,0 +1,26 @@
+{
+  "name": "tibronessorg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devbrones/tibronessorg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devbrones/tibronessorg/issues"
+  },
+  "homepage": "https://github.com/devbrones/tibronessorg#readme",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "elasticlunr": "^0.9.5"
+  }
+}
